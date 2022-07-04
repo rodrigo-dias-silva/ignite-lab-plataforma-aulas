@@ -27,14 +27,14 @@ export default function Lesson(props: LessonProps) {
         {availableDateFormatted}
       </span>
 
-      <div className={classnames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500', {
-        'bg-green-500': isActiveLesson,
+      <div className={classnames('rounded border border-gray-500 p-4 mt-2 group-hover:border-purple-500', {
+        'bg-purple-500': isActiveLesson,
       })}>
         <header className="flex items-center justify-between">
           {isLessonAvaileble ? (
             <span className={classnames('text-sm font-medium flex items-center gap-2', {
               'text-white': isActiveLesson,
-              'text-blue-500': !isActiveLesson
+              'text-green-300': !isActiveLesson
             })}>
               <CheckCircle size={20} />
               Conteúdo liberado
@@ -47,7 +47,7 @@ export default function Lesson(props: LessonProps) {
           )}
           <span className={classnames('text-xs rounded py-[.125rem] px-2 text-white border  font-bold', {
             'border-white': isActiveLesson,
-            'border-green-300': !isActiveLesson,
+            'border-purple-800': !isActiveLesson,
           })}>
             {props.type === 'live' ? 'AO VIVO' : 'AULA PRÁTICA'}
           </span>
