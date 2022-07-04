@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import { Logo } from "../components/Logo";
 import { gql, useMutation } from '@apollo/client';
 import { useNavigate } from "react-router-dom";
+import { Background } from "../components/Background";
 
 const CREATE_SUBSCRIBER_MUTATION = gql`
   mutation CreateSubscriber($email: String!, $name: String!) {
@@ -40,7 +41,7 @@ export function Subscribe() {
         <div className="max-w-[640px]">
           <Logo />
           <h1 className="mt-8 text-[2.5rem] leading-tight">
-            Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React</strong>
+            Construa uma <strong className="text-red-500">aplicação completa</strong>, do zero, com <strong className="text-red-500">React</strong>
           </h1>
           <p className="mt-4 text-gray-200 leading-relaxed">
             Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
@@ -66,7 +67,7 @@ export function Subscribe() {
 
             <button
               disabled={loading}
-              className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50"
+              className="mt-4 bg-red-500 uppercase py-4 rounded font-bold text-sm hover:bg-red-700 transition-colors disabled:opacity-50"
               type="submit"
             >
               Garantir minha vaga
@@ -74,7 +75,9 @@ export function Subscribe() {
           </form>
         </div>
       </div>
-      <img src="/src/assets/cm.png" className="mt-10" alt="" />
+      <div className="mt-10">
+        <Background />
+      </div>
     </div>
   )
 }

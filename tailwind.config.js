@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        blur: 'url(/src/assets/blur-bg.png)'
+        blur: 'url(/src/assets/blur-bg-akatsuki_1.png)'
       },
       fontFamily: {
         sans: 'Roboto, sans-serif'
@@ -24,7 +24,8 @@ module.exports = {
           500: '#fba94c'
         },
         red: {
-          500: '#f75a68'
+          500: '#ff463f',
+          700: '#aa4433'
         },
         gray: {
           100: '#e1e1e6',
